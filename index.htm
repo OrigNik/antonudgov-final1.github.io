@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Миграция: структурный анализ</title>
     <style>
         * {
@@ -23,7 +23,7 @@
         header {
             background: rgba(253, 245, 195, 0.1);
             backdrop-filter: blur(8px);
-            padding: 1.5rem;
+            padding: 1rem;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.25);
             position: sticky;
@@ -35,14 +35,14 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1rem;
         }
 
         .category-section {
             background: rgba(255, 255, 255, 0.08);
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 12px;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255,255,255,0.15);
             box-shadow: 0 8px 40px rgba(0,0,0,0.2);
@@ -50,9 +50,9 @@
 
         .country-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .country-card {
@@ -84,30 +84,35 @@
 
         .country-card img {
             width: 100%;
-            height: 240px;
+            height: 200px;
             object-fit: cover;
             border-bottom: 2px solid rgba(255,255,255,0.15);
             filter: saturate(1.1);
         }
 
         .card-content {
-            padding: 1.5rem;
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            line-height: 1.3;
         }
 
         h2 {
             color: #ebf4ff;
-            margin: 2rem 0;
-            font-size: 2.2em;
-            letter-spacing: -0.03em;
+            margin: 1.5rem 0;
+            font-size: 1.8rem;
+            letter-spacing: -0.02em;
         }
 
         h3 {
             color: #7dd3fc;
-            margin-bottom: 1.5rem;
-            font-size: 1.5em;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
         }
 
         h3::before {
@@ -116,8 +121,8 @@
         }
 
         .card-section {
-            margin: 1.5rem 0;
-            padding: 1rem;
+            margin: 1rem 0;
+            padding: 0.8rem;
             background: rgba(0,0,0,0.3);
             border-radius: 8px;
             border-left: 4px solid #7dd3fc;
@@ -125,8 +130,8 @@
 
         .card-section h4 {
             color: #fca5a5;
-            margin: 0 0 0.8rem;
-            font-size: 1.1em;
+            margin: 0 0 0.6rem;
+            font-size: 1rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -138,8 +143,7 @@
         }
 
         .section-placeholder {
-            height: auto;
-            padding: 1rem;
+            padding: 0.8rem;
             background: rgba(255,255,255,0.05);
             border-radius: 6px;
             color: rgba(255,255,255,0.9);
@@ -152,22 +156,61 @@
             backdrop-filter: blur(8px);
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
+            padding: 1.5rem;
+            margin-top: 3rem;
             border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
             .container {
-                padding: 1.5rem;
+                padding: 0.8rem;
             }
             
             h2 {
-                font-size: 1.8em;
+                font-size: 1.5rem;
+                margin: 1rem 0;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .country-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
             
             .country-card img {
-                height: 200px;
+                height: 180px;
+            }
+            
+            .card-content {
+                padding: 0.8rem;
+            }
+            
+            .card-section {
+                margin: 0.8rem 0;
+                padding: 0.6rem;
+            }
+            
+            footer {
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            .section-placeholder {
+                font-size: 0.85em;
             }
         }
 
@@ -210,7 +253,6 @@
                                 Борьба за территориальную целостность (Донбасс, Херсон, Запорожье), зависимость от военной помощи Запада, энергетическая уязвимость.
                             </div>
                         </div>
-
                     </div>
                 </div>
 
